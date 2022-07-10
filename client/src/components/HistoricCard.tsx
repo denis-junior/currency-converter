@@ -26,7 +26,7 @@ export const HistoricCard: FC<Props> = ({ historic }) => {
                                     <th>Value</th>
                                 </tr>
                             </thead>
-                            <tbody> oi
+                            <tbody>
                             {historic.map((value, index)=>{
                                 return(
                                     <tr key={index}>
