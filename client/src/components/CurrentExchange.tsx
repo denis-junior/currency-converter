@@ -1,21 +1,20 @@
 // @flow
 import axios from "axios";
-import { FC, useCallback, useState } from "react";
+import { FC, useCallback, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { PrivateHomepageContext } from "../contexts/PrivateHomepageContext";
 import { api } from "../services/api";
 import { CurrentConverterValue } from "../types/CurrencyConverterItem";
-
-type Props = {
-  setHistoric: Function;
-};
 
 interface IFormState {
   type: string;
   current_value: number;
   to_now_value: string;
 }
-export const CurrentExchange: React.FC<Props> = ({ setHistoric, ...props }) => {
+export const CurrentExchange: React.FC = () => {
   const navigate = useNavigate();
+
+  const {setHistoric} = useContext(PrivateHomepageContext)
 
   const [formState, setFormState] = useState<IFormState>({
     type: "USDtoGBP",

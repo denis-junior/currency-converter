@@ -1,14 +1,11 @@
 // @flow
-import { FC } from "react";
+import { FC, useContext } from "react";
 import { CurrentConverterValue } from "../types/CurrencyConverterItem";
 import moment from 'moment';
+import { PrivateHomepageContext } from "../contexts/PrivateHomepageContext";
 
-interface Props {
-    historic: CurrentConverterValue[];
-}
-
-export const HistoricCard: FC<Props> = ({ historic }) => {
-    
+export const HistoricCard: FC = () => {
+    const {historic} = useContext(PrivateHomepageContext)
     return (
         <div className="px-3 bg-light rounded">
             <h4 className="text-center py-3">Your historic</h4>
