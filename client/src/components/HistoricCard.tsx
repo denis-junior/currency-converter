@@ -1,6 +1,5 @@
 // @flow
 import { FC, useContext } from "react";
-import { CurrentConverterValue } from "../types/CurrencyConverterItem";
 import moment from 'moment';
 import { PrivateHomepageContext } from "../contexts/PrivateHomepageContext";
 

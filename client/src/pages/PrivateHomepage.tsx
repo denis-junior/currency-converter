@@ -4,7 +4,6 @@ import { HistoricCard } from '../components/HistoricCard';
 import { Navbar } from '../components/Navbar';
 import { PrivateHomepageContext } from '../contexts/PrivateHomepageContext';
 import { api } from '../services/api';
-import { CurrentConverterValue } from '../types/CurrencyConverterItem';
 
 
 export const PrivateHomepage = () => {
