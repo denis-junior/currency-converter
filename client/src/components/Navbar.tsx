@@ -1,10 +1,8 @@
 // @flow 
-import * as React from 'react';
+import {FC} from 'react';
 import { useNavigate } from 'react-router-dom';
-type Props = {
 
-};
-export const Navbar = (props: Props) => {
+export const Navbar: FC = () => {
     const navigate = useNavigate()
     
     return (
